@@ -8,8 +8,32 @@ class TalentBase < Sinatra::Base
   enable :sessions, :method_override
 	set :public_folder, File.expand_path("../../public", __FILE__)
 
-  get '/' do
-    erb :index
-  end
+before do
+  @contact = TalentTool.instance
+end
+
+get '/' do
+	erb :index
+end 
+
+get '/add' do
+	erb :add
+end
+
+post '/add' do
+	@contact = TalentTool.create
+	@contact.add_talent(params[:name], params[:location], params[:date_of_birth])
+end
+
+get '/search' do
+	erb :search
+end 
+
+post '/search' do 
+	@contact = TalentTool.create
+	@contact.filter(params[:location])
+end 
+
+
   run! if app_file == $PROGRAM_NAME
 end
