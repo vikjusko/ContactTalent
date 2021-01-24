@@ -1,7 +1,20 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/victoriajusko/Desktop/ContactTalent/spec/talent_data_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/victoriajusko/Desktop/ContactTalent/lib/talent_data.rb": {
+        "lines": [
+
+        ]
+      }
     },
-    "timestamp": 1611486878
+    "timestamp": 1611487115
   }
 }
