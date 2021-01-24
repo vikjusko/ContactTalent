@@ -5,18 +5,46 @@
         "lines": [
           1,
           null,
-          0,
+          1,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/victoriajusko/Desktop/ContactTalent/lib/talent_tool.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          5,
+          1,
           0,
           null,
-          0,
-          0,
-          0,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1611487411
+    "timestamp": 1611487742
   }
 }
