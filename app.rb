@@ -6,6 +6,7 @@ require './lib/talent_tool'
 
 class TalentBase < Sinatra::Base
   enable :sessions, :method_override
+	set :public_folder, File.expand_path("../../public", __FILE__)
 
   get '/' do
     erb :index
