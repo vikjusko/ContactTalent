@@ -15,7 +15,7 @@ describe TalentTool do
     end
 
     it "let's the user know if the location does not return any names" do
-      expect(tool.filter('Tokio')).to eq 'Sorry, no-one lives in this city'
+      expect(tool.filter('Tokio')).to eq "Sorry, there is no talent that we have in this city"
     end
 
     it 'prompts the user to input a city rather than passing an empty sting' do

@@ -16,7 +16,7 @@ class TalentTool
     file = File.read('data.json')
     new_data = JSON.parse(file).select { |x| x['location'].to_s.downcase == city.downcase }
     if new_data.empty?
-      'Sorry, no-one lives in this city'
+      'Sorry, there is no talent that we have in this city'
     else
       new_data.map! { |x| x['name'] }.join(("\n"))
     end
