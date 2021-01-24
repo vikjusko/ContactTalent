@@ -23,5 +23,10 @@
     "name": "Morty Smith",
     "location": "Seattle",
     "date_of_birth": "1943-01-19"
+  },
+  {
+    "name": "Meg Griffin",
+    "location": "Quahog",
+    "date_of_birth": "1999-11-01"
   }
 ]
