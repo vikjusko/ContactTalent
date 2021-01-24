@@ -17,5 +17,14 @@ describe TalentTool do
     it "let's the user know if the location does not return any names" do
       expect(tool.filter('Tokio')).to eq 'Sorry, no-one lives in this city'
     end
-  end
+	
+	
+	it "prompts the user to input a city rather than passing an empty sting" do
+  	expect { tool.filter("") }.to raise_error "Please input a city name"
+	end
+
+	it 'doesnt let a user inut an integer' do
+      expect { tool.filter(123) }.to raise_error 'Please input a valid city name'
+		end
+	end
 end
