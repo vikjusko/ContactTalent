@@ -15,12 +15,19 @@ class TalentTool
     end
 	end
 	
-	  context 'add_data method' do
-    it 'add_data adds a new name if the name is non existant in the system' do
-      tool.add_talent('William Burnside', 'Nottingham','1994-01-19')
-      expect(tool.filter('Nottingham')).to eq 'William Burnside'
-		end
-	end
+	def add_talent(name, city, date_of_birth)
+  file = File.read("data.json")
+  duplicate_data = JSON.parse(file).select { |x| x["name"] == name }
+  return "Sorry, this person has already been added to the system" if duplicate_data.length.positive?
+  new_hash = { "name" => name, "location" => city, "date_of_birth" => date_of_birth }
+  file = File.read("data.json")
+  secondJsonArray = JSON.parse(file)
+  secondJsonArray << new_hash
+  File.open("data.json", "w") do |f|
+    f.puts JSON.pretty_generate(secondJsonArray)
+    return "#{name} has been added to the system, thank you!"
+  end
+end
 
 end
 
