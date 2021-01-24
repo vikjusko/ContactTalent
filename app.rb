@@ -21,7 +21,6 @@ class TalentBase < Sinatra::Base
 
   post '/add' do
     @contact = TalentTool.create
-    @contact.add_talent(params[:name], params[:location], params[:date_of_birth])
     erb :added
   end
 
@@ -32,7 +31,6 @@ class TalentBase < Sinatra::Base
   post '/search' do
     @contact = TalentTool.create
     @contact.filter(params[:location])
-    @contact.result
     erb :result
   end
 
