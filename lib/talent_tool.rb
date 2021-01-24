@@ -2,10 +2,11 @@
 
 require 'json'
 class TalentTool
-attr_reader :result
-	def initialize
-		@result =[]
-	end 
+  attr_reader :result
+
+  def initialize
+    @result = []
+  end
 
   def self.create
     @talenttool = TalentTool.new
@@ -18,12 +19,13 @@ attr_reader :result
   def filter(city)
     raise 'Please input a valid city name' if city.is_a?(Integer)
     raise 'Please input a city name' if city.empty?
+
     file = File.read('data.json')
     new_data = JSON.parse(file).select { |x| x['location'].to_s.downcase == city.downcase }
     if new_data.empty?
       'Sorry, there is no talent that we have in this city'
-		else
-			result << new_data
+    else
+      result << new_data
       new_data.map! { |x| x['name'] }.join(("\n"))
     end
   end

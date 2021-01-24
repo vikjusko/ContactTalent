@@ -15,7 +15,7 @@ describe TalentTool do
     end
 
     it "let's the user know if the location does not return any names" do
-      expect(tool.filter('Tokio')).to eq "Sorry, there is no talent that we have in this city"
+      expect(tool.filter('Tokio')).to eq 'Sorry, there is no talent that we have in this city'
     end
 
     it 'prompts the user to input a city rather than passing an empty sting' do
@@ -37,12 +37,12 @@ describe TalentTool do
       expect(tool.add_talent('Frank Reynolds', 'Nottingham',
                              '1994-01-19')).to eq 'Sorry, this person has already been added to the system'
     end
-	end
-	
-	context "#self.instance" do 
-		it "returns an instance of the talenttool" do
-			TalentTool.create
-			expect(TalentTool.instance).to be_an_instance_of(TalentTool)
-		end
-	end 
+  end
+
+  context '#self.instance' do
+    it 'returns an instance of the talenttool' do
+      TalentTool.create
+      expect(TalentTool.instance).to be_an_instance_of(TalentTool)
+    end
+  end
 end
