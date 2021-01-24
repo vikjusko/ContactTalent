@@ -22,6 +22,7 @@ class TalentBase < Sinatra::Base
   post '/add' do
     @contact = TalentTool.create
     @contact.add_talent(params[:name], params[:location], params[:date_of_birth])
+    erb :added
   end
 
   get '/search' do
