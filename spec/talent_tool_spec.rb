@@ -27,4 +27,11 @@ describe TalentTool do
       expect { tool.filter(123) }.to raise_error 'Please input a valid city name'
 		end
 	end
+	
+	context 'add_data method' do
+    it 'add_data adds a new name if the name is non existant in the system' do
+      tool.add_talent('William Burnside', 'Nottingham','1994-01-19')
+      expect(tool.filter('Nottingham')).to eq 'William Burnside'
+		end	
+	end
 end

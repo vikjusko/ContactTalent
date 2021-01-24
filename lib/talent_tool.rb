@@ -13,5 +13,14 @@ class TalentTool
     else
       new_data.map! { |x| x['name'] }.join(("\n"))
     end
-  end
+	end
+	
+	  context 'add_data method' do
+    it 'add_data adds a new name if the name is non existant in the system' do
+      tool.add_talent('William Burnside', 'Nottingham','1994-01-19')
+      expect(tool.filter('Nottingham')).to eq 'William Burnside'
+		end
+	end
+
 end
+
