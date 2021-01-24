@@ -21,6 +21,6 @@ feature 'Add Page content' do
     fill_in 'location', with: 'Springfield'
     fill_in 'date_of_birth', with: '1999-11-01'
     click_button 'Add talent'
-    expect(page).to have_content('Sorry, this person has already been added to the system')
+    expect(page).to have_content('Sorry, this person has already been added to the system.')
   end
 end

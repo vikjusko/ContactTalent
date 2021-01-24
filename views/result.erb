@@ -1,5 +1,5 @@
 <h1><%= if @contact.result.length.positive? 
 @contact.result[0].each {|x|   x['name'] }.join(",\n") 
 else
-return "Sorry, there is no talent that we have in this city'" 
+return "Sorry, there is no talent that we have in this city" 
 	end %></h1>

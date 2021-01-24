@@ -34,7 +34,7 @@ class TalentTool
     # scanning data for existing names
     file = File.read('data.json')
     duplicate_data = JSON.parse(file).select { |x| x['name'] == name }
-    return 'Sorry, this person has already been added to the system' if duplicate_data.length.positive?
+    return 'Sorry, this person has already been added to the system.' if duplicate_data.length.positive?
 
     # adds data if there's been no duplicate information found
     new_hash = { 'name' => name, 'location' => city, 'date_of_birth' => date_of_birth }

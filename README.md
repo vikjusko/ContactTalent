@@ -8,7 +8,7 @@ The program should then filter the array of supplied talent, and output the name
 
 ## User manual:
 
-1) Please clone it repository to your local device (make sure you have Bundler and Ruby installed to start running this application)
+1) Please clone this repository to your local device (make sure you have Bundler and Ruby installed to start running this application)
 
 2) Once the repository is cloned please run bundle to install gem dependancies
 
@@ -36,7 +36,7 @@ localhost:9292
 ![Alt text](https://i.ibb.co/jG6RyCx/Screenshot-2021-01-24-at-13-50-55.png)
 
 ### OR 
-![Alt text](https://i.ibb.co/c2Sc3jx/Screenshot-2021-01-24-at-13-51-08.png)
+![Alt text](https://i.ibb.co/MSZ8JvP/Screenshot-2021-01-24-at-14-25-05.png)
 
 
 ### Add Talent page:
@@ -46,5 +46,5 @@ localhost:9292
 ![Alt text](https://i.ibb.co/J7xtfVr/Screenshot-2021-01-24-at-13-51-50.png)
 
 ### OR
-![Alt text](https://i.ibb.co/PgwyYX4/Screenshot-2021-01-24-at-14-02-58.png)
+![Alt text](https://i.ibb.co/zJmdY5h/Screenshot-2021-01-24-at-14-26-02.png)
 

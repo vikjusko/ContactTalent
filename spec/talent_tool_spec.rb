@@ -35,7 +35,7 @@ describe TalentTool do
 
     it 'lets user know that the person they are trying to add already exists in the system' do
       expect(tool.add_talent('Frank Reynolds', 'Nottingham',
-                             '1994-01-19')).to eq 'Sorry, this person has already been added to the system'
+                             '1994-01-19')).to eq 'Sorry, this person has already been added to the system.'
     end
   end
 
