@@ -28,5 +28,10 @@
     "name": "Meg Griffin",
     "location": "Quahog",
     "date_of_birth": "1999-11-01"
+  },
+  {
+    "name": "Peter Griffin",
+    "location": "Quahog",
+    "date_of_birth": "1963-01-22"
   }
 ]
