@@ -25,11 +25,11 @@ require 'rspec'
 ENV['ENVIRONMENT'] = 'test'
 ENV['RACK_ENV'] = 'test'
 
-# def app
-#   # Load the application defined in config.ru
-#   Rack::Builder.parse_file("config.ru").first
-# end
-# Capybara.app = app
+def app
+  # Load the application defined in config.ru
+  Rack::Builder.parse_file('config.ru').first
+end
+Capybara.app = app
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
                                                                  SimpleCov::Formatter::Console,
                                                                  SimpleCov::Formatter::HTMLFormatter

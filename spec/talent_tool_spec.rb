@@ -31,11 +31,18 @@ describe TalentTool do
     it 'add_data adds a new name if the name is non existant in the system' do
       tool.add_talent('Morty Smith', 'Seattle', '1943-01-19')
       expect(tool.filter('Seattle')).to eq 'Morty Smith'
-		end
-		
-		it 'lets user know that the person they are trying to add already exists in the system' do
-      expect(tool.add_talent('Frank Reynolds', 'Nottingham','1994-01-19')).to eq 'Sorry, this person has already been added to the system'
     end
-  
-  end
+
+    it 'lets user know that the person they are trying to add already exists in the system' do
+      expect(tool.add_talent('Frank Reynolds', 'Nottingham',
+                             '1994-01-19')).to eq 'Sorry, this person has already been added to the system'
+    end
+	end
+	
+	context "#self.instance" do 
+		it "returns an instance of the talenttool" do
+			TalentTool.create
+			expect(TalentTool.instance).to be_an_instance_of(TalentTool)
+		end
+	end 
 end
