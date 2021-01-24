@@ -10,7 +10,7 @@ feature 'search page spec' do
     visit '/search'
     fill_in 'location', with: 'Seattle'
     click_button 'Search'
-    expect(page).to have_content('Morty Smith')
+    expect(page).to have_content("Home Search Add\nMorty Smith, Summer Smith")
   end
 
   it 'it finds the user that lives in a submitted city ' do

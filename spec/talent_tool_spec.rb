@@ -30,7 +30,7 @@ describe TalentTool do
   context 'add_data method' do
     it 'add_data adds a new name if the name is non existant in the system' do
       tool.add_talent('Morty Smith', 'Seattle', '1943-01-19')
-      expect(tool.filter('Seattle')).to eq 'Morty Smith'
+      expect(tool.filter('Seattle')).to eq "Morty Smith\nSummer Smith"
     end
 
     it 'lets user know that the person they are trying to add already exists in the system' do
